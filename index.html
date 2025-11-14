@@ -262,7 +262,9 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="testimonials-swiper-wrapper">
+                <div class="swiper testimonials-swiper">
+                    <div class="swiper-wrapper">
                 <div class="col-lg-3 col-md-6">
                     <div class="value-card hover-lift">
                         <div class="value-icon gradient-bg-1">
@@ -298,6 +300,14 @@
                         <h5>No Advance Payment</h5>
                         <p>Pay only when you love our services. We're confident in our work and your satisfaction matters most.</p>
                     </div>
+                </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="testimonial-controls text-center mt-3">
+                    <button class="btn btn-outline-primary me-2 swiper-prev">Previous</button>
+                    <button class="btn btn-primary swiper-next">Next</button>
                 </div>
             </div>
         </div>
@@ -1315,11 +1325,41 @@
     <!-- Toastify JS -->
     <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
     
-    <!-- Swiper Slider JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+        <!-- Swiper Slider CSS + JS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+        <style>
+        .testimonials-swiper { padding: 20px 0; }
+        .testimonials-swiper .swiper-slide { display:flex; justify-content:center; }
+        .testimonial-card { max-width: 720px; width:100%; }
+        .testimonial-controls .btn { min-width:110px; }
+        @media(min-width:992px){ .testimonials-swiper .swiper-slide { width: 60%; } }
+        </style>
+
+        <!-- Custom JS -->
+        <script src="script.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            try {
+                const tSwiper = new Swiper('.testimonials-swiper', {
+                    direction: 'horizontal',
+                    loop: true,
+                    autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                    pagination: { el: '.testimonials-swiper .swiper-pagination', clickable: true }
+                });
+
+                const prev = document.querySelector('.swiper-prev');
+                const next = document.querySelector('.swiper-next');
+                if (prev) prev.addEventListener('click', ()=> tSwiper.slidePrev());
+                if (next) next.addEventListener('click', ()=> tSwiper.slideNext());
+            } catch (e) {
+                console.warn('Swiper init failed:', e);
+            }
+        });
+        </script>
     <script>
   let deferredPrompt;
 
