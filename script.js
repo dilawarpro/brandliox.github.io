@@ -204,12 +204,18 @@ function initializeChatbot() {
             userSay(payload);
             handleUserMessage(payload);
         } else if (payload && payload.type === 'call') {
+            userSay('Call Now');
             botSay('Click the button below to call our expert:', [], null, [{ type: 'call', label: payload.label || 'Call Now', tel: payload.tel }]);
         } else if (payload && payload.type === 'collect_contact') {
-            showContactForm();
+            userSay('Share Contact Info');
+            showTypingIndicator(() => {
+                showContactForm();
+            });
         } else if (payload && payload.type === 'schedule') {
             userSay('Schedule a Call');
-            showScheduleOptions();
+            showTypingIndicator(() => {
+                showScheduleOptions();
+            });
         } else if (payload && payload.payload) {
             userSay(payload.label || payload.payload);
             handleUserMessage(payload.payload);
