@@ -1070,5 +1070,5 @@ document.addEventListener('click', function (e) {
 console.log('%c🚀 Rank Master - Premium Digital Marketing & Web Development', 'color: #6366f1; font-size: 16px; font-weight: bold;');
 console.log('%cWebsite: https://Rank Master.com', 'color: #ec4899; font-size: 12px;');
 console.log('%cPhone: +92 336 9295 295', 'color: #10b981; font-size: 12px;');
-console.log('%cEmail: mailRank Master@gmail.com', 'color: #0ea5e9; font-size: 12px;');
+console.log('%cEmail: mailrankmaster@gmail.com', 'color: #0ea5e9; font-size: 12px;');
 console.log('%cDesigned & Developed by Dilawar Pro ❤️', 'color: #f59e0b; font-size: 12px;');
