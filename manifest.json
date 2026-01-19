@@ -1,7 +1,7 @@
 {
-  "name": "Rank Master",
-  "short_name": "Rank Master",
-  "description": "Rank Master - Website Development & Digital Marketing Services | #1 Google Ranking",
+  "name": "Brandliox",
+  "short_name": "Brandliox",
+  "description": "Brandliox - Website Development & Digital Marketing Services | #1 Google Ranking",
   "start_url": "/index.html",
   "scope": "/",
   "display": "standalone",
@@ -9,12 +9,12 @@
   "theme_color": "#0d6efd",
   "icons": [
     {
-      "src": "img/rankmaster.jpg",
+      "src": "img/brandliox.jpg",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "img/rankmaster.jpg",
+      "src": "img/brandliox.jpg",
       "sizes": "512x512",
       "type": "image/png"
     }
