@@ -150,7 +150,28 @@
             </div>
         </div>
     </nav>
-
+<!-- Perloader started -->
+ <!-- Add this at the beginning of your <body> tag -->
+<div class="preloader" id="preloader">
+    <div class="preloader-container">
+        <div class="spinner-ring"></div>
+        <div class="preloader-image-wrapper">
+            <img src="img/preloader.jpg" alt="Loading..." class="preloader-image">
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="loading-text">
+            <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>
+        </div>
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</div>
+<!-- Preloader ended -->
     <!-- Hero Section -->
     <section id="home" class="hero-section pt-5 pb-5 overflow-hidden">
         <div class="container-fluid">
@@ -1369,6 +1390,54 @@
 
         <!-- Custom JS -->
         <script src="script.js"></script>
+        <!-- Preloader staterted -->
+          <script>
+        // Preloader Script
+        (function() {
+            const preloader = document.getElementById('preloader');
+            const progressBar = document.getElementById('progressBar');
+            
+            // Simulate loading progress
+            let progress = 0;
+            const progressInterval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress > 100) progress = 100;
+                progressBar.style.width = progress + '%';
+                
+                if (progress === 100) {
+                    clearInterval(progressInterval);
+                }
+            }, 200);
+
+            // Hide preloader when page is fully loaded
+            window.addEventListener('load', function() {
+                // Ensure minimum display time for smooth UX
+                setTimeout(() => {
+                    progressBar.style.width = '100%';
+                    
+                    setTimeout(() => {
+                        preloader.classList.add('fade-out');
+                        
+                        // Remove preloader from DOM after animation
+                        setTimeout(() => {
+                            preloader.style.display = 'none';
+                        }, 600);
+                    }, 300);
+                }, 1000); // Minimum 1 second display
+            });
+
+            // Fallback: Hide preloader after 5 seconds max
+            setTimeout(() => {
+                if (!preloader.classList.contains('fade-out')) {
+                    preloader.classList.add('fade-out');
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 600);
+                }
+            }, 5000);
+        })();
+    </script>
+    <!-- Preloader ended -->
         <script>
         document.addEventListener('DOMContentLoaded', function(){
             try {
