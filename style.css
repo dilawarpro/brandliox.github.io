@@ -199,7 +199,7 @@ body {
         .dot:nth-child(3) { animation-delay: 0.4s; }
 
         /* Spinning Ring */
-        .spinner-ring {
+        /* .spinner-ring {
             position: absolute;
             width: 200px;
             height: 200px;
@@ -220,7 +220,7 @@ body {
             border: 3px solid transparent;
             border-top-color: #ec4899;
             animation: spin 2s linear infinite reverse;
-        }
+        } */
 
         /* ============================================
            KEYFRAME ANIMATIONS
