@@ -725,7 +725,7 @@ function initializeToastNotifications() {
             duration: 5000,
             gravity: "bottom",
             position: "center",
-            backgroundColor: "linear-gradient(135deg, #6366f1 0%, #ec4899 100%)",
+            backgroundColor: "linear-gradient(to right, #4B32A1 0%, #9B308E 40%, #E63E36 75%, #F58220 100%)",
             stopOnFocus: true,
             className: "custom-toast",
             escapeMarkup: false
