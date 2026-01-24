@@ -815,7 +815,7 @@ function initializeToastNotifications() {
                     <i class="fas fa-check-circle" style="font-size: 20px; color: white;"></i>
                     <div>
                         <div style="font-weight: 600; margin-bottom: 2px;">${notification.flag} ${notification.name}</div>
-                        <div style="font-size: 13px; opacity: 0.95;"><strong>${notification.business}</strong> — bought ${notification.service}</div>
+                        <div style="font-size: 13px; opacity: 0.95;"><strong>${notification.business}</strong> — Bought ${notification.service}</div>
                     </div>
                 </div>
                 <button id="${closeId}" style="
